@@ -1,5 +1,8 @@
 const assert = require('assert')
 
+const chai = require('chai')
+const expect = chai.expect
+
 //describe for each file
 //context for each function
 //it for each single test
@@ -42,4 +45,20 @@ describe("file to be tested", () => {
     })
 
     //chai assertion library
+    context("function3", () => {
+        it("first chai test", () => {
+            expect(1).to.equal(1);
+        })
+
+        it("object deep equal test", () => {
+            expect({ name: "swapnil" }).to.deep.equal({ name: "swapnil" });
+        })
+
+        it("different methods", () => {
+            expect(3).to.be.a('number');
+            expect('foo').to.be.a('string');
+            expect(5>8).to.be.false;
+            expect({}).to.be.a('object');
+        })
+    })
 })
