@@ -3,6 +3,10 @@ const { Stack } = require('./stack')
 
 exports.Evaluator = class Evaluator {
 
+    constructor() {
+
+    }
+
     precedence(operator) {
         if (operator === '^')
             return 3;
